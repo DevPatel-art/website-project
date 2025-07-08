@@ -48,9 +48,6 @@ const TechCardList = () => {
             <p>
               <strong>Price:</strong> ${gadget.price || "N/A"}
             </p>
-            <p>
-              <strong>Category:</strong> {gadget.category || "Uncategorized"}
-            </p>
           </div>
         ))}
       </div>
