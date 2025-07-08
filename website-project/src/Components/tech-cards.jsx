@@ -13,11 +13,9 @@ const TechCardList = () => {
         const items = data.data
           .filter((entry) => entry)
           .map((entry) => ({
-            id: entry.id,
             name: entry.name,
             description: entry.description,
             price: entry.price,
-            category: entry.category,
             image:
               entry.image?.formats?.medium?.url || entry.image?.url || null,
           }));
