@@ -31,6 +31,17 @@ function Content({ page }) {
         </div>
       );
 
+    case 'contact':
+      return (
+        <div className='App'>
+          <h1>Contact Us Online</h1>
+          <ul>
+            <li>Email: techgadgets334@xyz.com</li>
+            <li>Phone: +1(403)888-8888</li>
+          </ul>
+        </div>
+      )
+
     default:
       return (
         <div className="App">
