@@ -17,6 +17,8 @@ function NavBar({ setPage }) {
           <li><button onClick={() => handleClick('about')}>About</button></li>
           <li><button onClick={() => handleClick('services')}>Services</button></li>
           <li><button onClick={() => handleClick('contact')}>Contact</button></li>
+          <li><button onClick={() => handleClick("signup")}>Sign Up</button></li>
+
         </ul>
         <div className="hamburger" onClick={() => setOpen(!open)}>
           <div/>

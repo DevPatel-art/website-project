@@ -1,5 +1,6 @@
 import React from 'react';
 import TechCardList from './Components/tech-cards';
+import SignUp from './Components/SignUp';
 
 function Content({ page }) {
   switch (page) {
@@ -41,6 +42,13 @@ function Content({ page }) {
           </ul>
         </div>
       )
+      case 'signup':
+        return (
+        <div className="App">
+          <SignUp />
+        </div>
+  );
+
 
     default:
       return (

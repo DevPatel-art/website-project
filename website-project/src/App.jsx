@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Content from './content';
 import NavBar from './navbar';
+import SignUp from './Components/SignUp';
 import './index.css';
 
 function App() {
