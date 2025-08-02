@@ -33,7 +33,6 @@ const techList = [
   "Nanoleaf Shapes Ultra Black Triangles"
 ];
 
-
  function TechWidget() {
   const [gadget, setGadget] = useState("");
 
