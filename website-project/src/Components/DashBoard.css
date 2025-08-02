@@ -91,3 +91,55 @@
     word-break: break-word; 
     font-size: 0.9rem; 
 }
+
+.widget{
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.widget-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.widget-options {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.widget-card.active {
+  background: #e0f7fa;
+  border-color: #00acc1;
+}
+.widget-card {
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  max-width: 400px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .dash-card, .widget-card {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .dash-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
