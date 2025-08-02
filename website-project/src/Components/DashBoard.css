@@ -1,0 +1,93 @@
+.dash-page {
+  background: #f7f7f7;
+  padding: 24px 16px 40px;
+  box-sizing: border-box;
+}
+
+.dash-card {
+  width: 100%;
+  max-width: 720px;
+  background: #fff;
+  margin: 0 auto;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.dash-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.avatar-lg {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6e9ef;
+  color: #333;
+  font-weight: 700;
+  font-size: 0.95rem;
+  object-fit: cover;
+}
+
+.avatar {
+  width: 48px;             
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.dash-titles h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.muted { 
+    margin: 2px 0 0; 
+    color: #666; 
+    font-size: 0.9rem; 
+}
+
+.btn {
+  margin-left: auto;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f2f2f2;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.btn:hover { 
+    background: #e8e8e8;
+ }
+
+.dash-info { 
+    padding-top: 12px; 
+    display: grid; 
+    gap: 8px; 
+}
+
+.row { 
+    display: grid; 
+    grid-template-columns: 120px 1fr; 
+    gap: 8px;
+ }
+
+.label { 
+    color: #555; 
+    font-weight: 600; 
+}
+
+.mono { 
+    font-family: ui-monospace, Menlo, Consolas, monospace; 
+    word-break: break-word; 
+    font-size: 0.9rem; 
+}

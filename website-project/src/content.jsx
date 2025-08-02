@@ -1,18 +1,23 @@
-import React from 'react';
-import TechCardList from './Components/tech-cards';
-import SignUp from './Components/SignUp';
+import React from "react";
+import TechCardList from "./Components/tech-cards";
+import SignIn from "./Components/SignIn";          
+import CreateAccount from "./Components/CreateAccount";
+import Dashboard from "./Components/DashBoard";
+import { useAuth } from "./auth/AuthProvider";
 
-function Content({ page }) {
+
+function Content({ page, setPage }) {
+  const { user, loading } = useAuth();
   switch (page) {
-    case 'home':
+    case "home":
       return (
         <div className="App">
-          <h1 className='homeheading'>Tech Gadgets</h1>
+          <h1>Tech Gadgets</h1>
           <TechCardList />
         </div>
       );
 
-    case 'about':
+    case "about":
       return (
         <div className="App">
           <h1>About Us</h1>
@@ -20,19 +25,26 @@ function Content({ page }) {
         </div>
       );
 
-    case 'services':
+    case "services":
       return (
         <div className="App">
           <h1>Our Services</h1>
           <ul>
             <li>Product Listing</li>
-            <li>Gadget Management</li>
-            <li>Details of Tech Gadgets</li>
+            <li>Inventory Management</li>
+            <li>CMS Integration</li>
           </ul>
         </div>
       );
 
-    case 'contact':
+    case "signin":
+      return (
+        <div className="App">
+          <SignIn setPage={setPage} />
+        </div>
+      );
+
+       case 'contact':
       return (
         <div className='App'>
           <h1>Contact Us Online</h1>
@@ -42,13 +54,29 @@ function Content({ page }) {
           </ul>
         </div>
       )
-      case 'signup':
-        return (
-        <div className="App">
-          <SignUp />
-        </div>
-  );
 
+    case "create-account":
+      return (
+        <div className="App">
+          <CreateAccount setPage={setPage} />
+        </div>
+      );
+
+    case "dashboard":
+      console.log("[Content] loading,user =>", loading, user?.uid, user?.email);
+      if (loading) return <div className="App">Loading…</div>;
+      if (!user) {
+        return (
+          <div className="App">
+            <SignIn setPage={setPage} />
+          </div>
+        );
+      }
+      return (
+        <div className="App">
+          <Dashboard user={user} />
+        </div>
+      );
 
     default:
       return (
