@@ -34,11 +34,22 @@ All content comes from Strapi:
   - we can manage images in the Media Library.
   - we can publish/unpublish any image
 
-Responsive Card Grid
+Responsive Card Grid and navigation:
   - 3 and 2 cards per row on desktop
   - Smooth hover animations and shadows
+  - hamburger icon for navigation
+  - responsive user dashboard
 
-Pagination
+User Dashboard:
+- Hello user feature where users name is visible if they are logged in
+- different widgets in dashboard like weather, quote, and tech product
+- google sign in implementation with the visible image in dashboard
+
+  User Auth:
+  - Added sign in/out with firebase
+  - Added google sign in with image
+
+Pagination:
   - Shows 5 cards per page.
   - Next/Previous buttons.
   - Shows total pages.
